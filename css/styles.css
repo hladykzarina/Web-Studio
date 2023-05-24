@@ -91,6 +91,7 @@ ul {
 
 .header-container {
   display: flex;
+  align-items: center;
 }
 
 .navigation {
@@ -551,7 +552,36 @@ img {
 }
 
 .footer-title {
-  margin-right: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .footer-title {
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: 108px;
+  }
+  .social-media {
+    margin-left: 24px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1158px) {
+  .footer-title {
+    margin-left: 0;
+    margin-right: 120px;
+  }
+}
+
+.social-media {
+  display: block;
 }
 
 .social-media-uppertitle {
@@ -565,6 +595,20 @@ img {
   margin-bottom: 16px;
 }
 
+@media only screen and (max-width: 767px) {
+  .social-media {
+    display: block;
+    position: absolute;
+    left: 110px;
+    margin-top: 160px;
+  }
+  .social-media-uppertitle {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}
+
 .footer-container {
   display: flex;
   align-items: baseline;
@@ -572,7 +616,7 @@ img {
 
 @media only screen and (max-width: 1157px) {
   .footer-container {
-    display: block;
+    flex-wrap: wrap;
   }
 }
 
@@ -610,10 +654,10 @@ img {
 }
 
 .logo-footer {
-  display: inline-block;
+  display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
+  padding: 0;
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -626,12 +670,28 @@ img {
   margin-bottom: 16px;
 }
 
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .logo-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 80px;
+  }
+}
+
+@media only screen and (max-width: 1157px) {
+  .footer-text {
+    margin-bottom: 72px;
+  }
+}
+
 .logo-studio {
   display: inline-block;
 }
 
 .footer-text {
-  max-width: 264px;
+  width: 264px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -644,17 +704,44 @@ img {
 .form {
   display: block;
   margin-left: auto;
-  gap: 24px;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .form {
+    margin-left: 108px;
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .form {
+    margin-top: 128px;
+  }
+  .form-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-button {
+    position: absolute;
+    left: 110px;
+    margin-top: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
 }
 
 .form-footer-container {
-  display: block;
+  display: flex;
+  row-gap: 24px;
 }
 
-/* Desktop */
-@media only screen and (min-width: 1158px) {
+/* Mobile */
+@media only screen and (max-width: 767px) {
   .form-footer-container {
-    display: flex;
+    display: block;
   }
 }
 
@@ -681,6 +768,12 @@ img {
   justify-content: center;
   background-color: transparent;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+  .form-footer-text {
+    width: 398px;
+  }
 }
 
 .form-footer-text:focus {
@@ -1185,4 +1278,69 @@ img {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   transition-duration: 250ms;
   transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile Menu */
+
+.menu-toggle {
+  min-height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+  transform: translate(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
 }
