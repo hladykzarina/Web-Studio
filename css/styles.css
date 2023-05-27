@@ -1539,7 +1539,7 @@ img {
   font-size: 36px;
   line-height: 40px;
   text-transform: capitalize;
-  color: #434455;
+  color: #404bbf;
 }
 
 .menu-link-mail {
@@ -1554,20 +1554,6 @@ img {
   order: 1;
   flex-grow: 0;
   margin-top: 40px;
-}
-
-.menu-link-tel:hover,
-.menu-link-tel:focus {
-  color: #404bbf;
-  transition-duration: 250ms;
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu-link-mail:hover,
-.menu-link-mail:focus {
-  color: #404bbf;
-  transition-duration: 250ms;
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-mobile {
@@ -1590,7 +1576,7 @@ img {
 
 .social-link-mobile:hover,
 .social-link-mobile:focus {
-  background-color: #4d5ae5;
+  background-color: #31d0aa;
   transition-duration: 250ms;
   transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
