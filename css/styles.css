@@ -473,7 +473,6 @@ img {
 
 .features-list-item {
   width: 396px;
-  flex-basis: calc(100% * 1 - 24px / 1);
 }
 
 /* Tablet */
@@ -1559,6 +1558,8 @@ img {
   transform: translate(100%);
   transition: transform 250ms ease-in-out;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-container.is-open {
@@ -1594,7 +1595,7 @@ img {
 }
 
 .mobile-contacts {
-  margin-top: 284px;
+  margin-top: auto;
 }
 
 .menu-link.active {
