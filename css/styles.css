@@ -61,7 +61,7 @@ img {
 
 .container {
   /* Basic Styles */
-  min-width: 320px;
+  max-width: 428px;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -69,7 +69,7 @@ img {
 /* Tablet */
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 744px;
+    max-width: 768px;
   }
 }
 
@@ -1255,10 +1255,10 @@ img {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 96px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 72px 24px 24px;
+  transform: translate(-50%);
+  padding: 72px 16px 24px;
   width: 408px;
   max-height: 576px;
   background: #fcfcfc;
@@ -1271,6 +1271,14 @@ img {
 @media only screen and (min-width: 428px) and (max-width: 767px) {
   .modal {
     max-width: 392px;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .modal {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    padding: 72px 24px 24px;
   }
 }
 
