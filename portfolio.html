@@ -24,12 +24,25 @@
           <a href="./index.html" class="main-logo link"
             >Web<span class="logo-header">Studio</span></a
           >
+          <!-- Mobile Menu -->
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="32" height="22">
+              <use href="./images/icons.svg#burger-icon"></use>
+            </svg>
+          </button>
+
           <ul class="menu-nav list">
             <li>
-              <a href="./index.html" class="menu-nav-item link">Studio</a>
+              <a href="./index.html" class="menu-nav-item link active"
+                >Studio</a
+              >
             </li>
             <li>
-              <a href="./portfolio.html" class="menu-nav-item link active"
+              <a href="./portfolio.html" class="menu-nav-item link"
                 >Portfolio</a
               >
             </li>
@@ -40,12 +53,12 @@
         </nav>
         <address class="contacts-address">
           <ul class="contacts-list list">
-            <li>
+            <li class="address-item">
               <a class="contacts link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <li>
+            <li class="address-item">
               <a class="contacts link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
@@ -360,10 +373,10 @@
           </ul>
         </div>
 
-        <div class="form">
+        <div class="form-footer">
           <p class="form-title">Subscribe</p>
           <form class="form-footer-container">
-            <label>
+            <label class="label-footer">
               <input
                 class="form-footer-text"
                 name="form for e-mail"
